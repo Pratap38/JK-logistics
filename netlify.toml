@@ -1,0 +1,13 @@
+# The site is plain static files, so there is nothing to build — Netlify still runs
+# `npm install` so the function gets its nodemailer dependency.
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# The browser only ever knows about /api/enquiry. Each host maps that path to its own
+# handler, so moving to another host never touches the JavaScript. On Apache/PHP hosting
+# the equivalent is a single .htaccess rewrite to send.php.
+[[redirects]]
+  from = "/api/enquiry"
+  to = "/.netlify/functions/enquiry"
+  status = 200

@@ -1,0 +1,9 @@
+node_modules/
+
+# Real SMTP credentials — never commit these. .env.example documents the names.
+.env
+.env.*
+!.env.example
+
+.netlify/
+.DS_Store

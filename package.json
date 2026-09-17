@@ -1,0 +1,9 @@
+{
+  "name": "jklogistics-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JK Smart Logistics website — static pages plus one Netlify Function for contact enquiries.",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

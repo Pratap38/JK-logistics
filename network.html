@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Network — JK Logistics UK Coverage</title>
+  <meta name="description" content="Where JK Smart Logistic Ltd delivers, city by city, with cut-off times for each region. One yard in Luton, minutes from the M1." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:   { DEFAULT: '#0B0D0C', soft: '#1A1D1B', mute: '#5A615C' },
+            lime:  { DEFAULT: '#C6F24E', dark: '#A8D92F', deep: '#6E9418' },
+            mist:  '#F4F6F3',
+            line:  '#E4E8E2',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Archivo', 'Inter', 'ui-sans-serif', 'sans-serif'],
+          },
+          maxWidth: { shell: '1440px' },
+          boxShadow: {
+            nav:  '0 2px 24px -6px rgba(11,13,12,.14), 0 0 0 1px rgba(11,13,12,.04)',
+            lift: '0 18px 40px -18px rgba(11,13,12,.45)',
+            card: '0 24px 60px -24px rgba(11,13,12,.35), 0 0 0 1px rgba(11,13,12,.05)',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(18px)' }, '100%': { opacity: '1', transform: 'none' } },
+          },
+          animation: {
+            fadeUp: 'fadeUp .7s cubic-bezier(.22,.9,.3,1) both',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { -webkit-font-smoothing: antialiased; }
+    .u-link { position: relative; }
+    .u-link::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+      background: #0B0D0C; transform: scaleX(0); transform-origin: left;
+      transition: transform .28s cubic-bezier(.22,.9,.3,1);
+    }
+    .u-link:hover::after { transform: scaleX(1); }
+    /* Service card reveal: hidden below the image, slides up on hover,
+       keyboard focus, or tap (.is-open is set by JS for touch). */
+    .reveal {
+      transform: translateY(100%);
+      transition: transform .5s cubic-bezier(.22,.9,.3,1);
+      will-change: transform;
+    }
+    .group:hover .reveal,
+    .group:focus-within .reveal,
+    .group.is-open .reveal { transform: translateY(0); }
+    .group.is-open [data-reveal] svg { transform: rotate(180deg); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ══ ANNOUNCEMENT BANNER ═══════════════════════════════════════════ -->
+  <div id="announce" class="relative z-50 bg-ink text-white">
+    <div class="mx-auto flex max-w-shell items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-10">
+      <span class="hidden shrink-0 rounded-full bg-lime px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-ink sm:inline-block">New</span>
+      <p class="flex-1 text-[13px] leading-snug text-white/85">
+        Collections across the UK six days a week, from one yard in Luton.
+        <a href="contact.html" class="ml-1 font-semibold text-lime underline-offset-4 hover:underline">Get a quote &rsaquo;</a>
+      </p>
+      <button type="button" data-dismiss="#announce" aria-label="Dismiss announcement"
+              class="shrink-0 rounded-full p-1 text-white/60 transition hover:bg-white/10 hover:text-white">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ HEADER ════════════════════════════════════════════════════════ -->
+  <header id="site-header" class="sticky top-0 z-40 bg-white transition-shadow duration-300">
+
+    <!-- Utility / contact bar -->
+    <div class="hidden border-b border-line lg:block">
+      <div class="mx-auto flex max-w-shell items-center gap-6 px-6 py-2.5 text-[13px] text-ink-mute lg:px-10">
+
+        <a href="tel:+447587543669" class="flex items-center gap-2 font-medium transition hover:text-ink">
+          <svg class="h-4 w-4 text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.5 4-2 1.4a12.5 12.5 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+          +44 7587 543669
+        </a>
+        <a href="mailto:r.singh@jksmartlogistics.co.uk" class="flex items-center gap-2 font-medium transition hover:text-ink">
+          <svg class="h-4 w-4 text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.5 8.4 6 8.4-6"/></svg>
+          r.singh@jksmartlogistics.co.uk
+        </a>
+
+        <div class="ml-auto flex items-center gap-6">
+          <button type="button" class="flex items-center gap-1.5 transition hover:text-ink">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+            United Kingdom — English
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <div class="mx-auto max-w-shell px-4 py-3 sm:px-6 lg:px-10">
+      <nav class="relative flex items-center gap-4 rounded-2xl bg-white px-4 py-3 shadow-nav lg:gap-8 lg:px-6" aria-label="Primary">
+
+        <!-- Menu (mobile only, sits left) -->
+        <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-ink transition hover:bg-mist lg:hidden">
+          <span class="sr-only">Open menu</span>
+          <svg id="icon-open"  class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+
+        <!-- Logo: centred on phones, left-aligned from lg -->
+        <a href="index.html" aria-label="JK Smart Logistics home"
+           class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0 lg:shrink-0">
+          <img src="images/clean/logo.png" alt="JK Smart Logistics Ltd"
+               class="h-10 w-auto sm:h-12 lg:h-14" width="640" height="321" />
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="ml-2 hidden items-center gap-7 text-[15px] font-medium lg:flex">
+          <li><a href="index.html#services"   class="u-link py-2 transition hover:text-ink-soft">Services</a></li>
+          <li><a href="contact.html" class="u-link py-2 transition hover:text-ink-soft">Contact</a></li>
+          <li><a href="network.html" aria-current="page" class="py-2 font-semibold text-ink underline decoration-lime decoration-2 underline-offset-8">Network</a></li>
+          <li><a href="about.html"      class="u-link py-2 transition hover:text-ink-soft">About</a></li>
+        </ul>
+
+        <!-- Call (mobile only, sits right) -->
+        <a href="tel:+447587543669" aria-label="Call JK Smart Logistics"
+           class="ml-auto grid h-11 w-11 shrink-0 place-items-center rounded-xl text-ink transition hover:bg-mist lg:hidden">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.5 4-2 1.4a12.5 12.5 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+        </a>
+
+        <!-- Desktop CTA -->
+        <a href="contact.html"
+           class="group ml-auto hidden h-12 items-center gap-2.5 rounded-full bg-ink pl-6 pr-2 text-[15px] font-semibold text-white transition hover:bg-ink-soft lg:inline-flex">
+          Contact JK
+          <span class="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+          </span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-line bg-white lg:hidden">
+      <div class="space-y-1 px-4 py-4 sm:px-6">
+        <a href="index.html#services"   class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">Services</a>
+        <a href="contact.html" class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">Contact</a>
+        <a href="network.html" aria-current="page" class="block rounded-xl bg-mist px-3 py-3 text-base font-semibold">Network</a>
+        <a href="about.html"      class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">About</a>
+        <div class="flex gap-3 pt-3">
+          <a href="contact.html" class="flex flex-1 items-center justify-center rounded-full bg-ink px-5 py-3.5 text-sm font-semibold text-white">Contact JK</a>
+        </div>
+        <a href="tel:+447587543669" class="block px-3 pt-3 text-sm font-semibold text-ink-mute">+44 7587 543669</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ══ BREADCRUMB ════════════════════════════════════════════════════ -->
+  <nav aria-label="Breadcrumb" class="border-b border-line bg-white">
+    <ol class="mx-auto flex max-w-shell items-center gap-2 px-4 py-3.5 text-[12px] font-semibold uppercase tracking-[.12em] sm:px-6 lg:px-10">
+      <li><a href="index.html" class="text-lime-deep transition hover:text-ink">Home</a></li>
+      <li aria-hidden="true" class="text-ink-mute">
+        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 6 6 6-6 6"/></svg>
+      </li>
+      <li class="truncate text-ink-mute" aria-current="page">Our Network</li>
+    </ol>
+  </nav>
+
+  <!-- ══ GLOBE ═════════════════════════════════════════════════════════ -->
+  <section class="relative isolate overflow-hidden bg-ink">
+    <!-- Deep-space backdrop: starfield, a glow sitting behind the globe, and a
+         vignette so the headline keeps its contrast. -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute inset-0 opacity-70" style="background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%20900%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%3Ccircle%20cx%3D%22518.1%22%20cy%3D%22135.8%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%221314.0%22%20cy%3D%2284.7%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.22%22%2F%3E%3Ccircle%20cx%3D%22811.9%22%20cy%3D%2233.7%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22385.1%22%20cy%3D%22495.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22198.1%22%20cy%3D%22200.9%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.57%22%2F%3E%3Ccircle%20cx%3D%2299.0%22%20cy%3D%22527.0%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.83%22%2F%3E%3Ccircle%20cx%3D%2274.5%22%20cy%3D%22772.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22865.1%22%20cy%3D%22513.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22289.2%22%20cy%3D%22523.4%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.31%22%2F%3E%3Ccircle%20cx%3D%22155.9%22%20cy%3D%22640.9%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.22%22%2F%3E%3Ccircle%20cx%3D%22329.5%22%20cy%3D%22612.4%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22745.0%22%20cy%3D%22831.1%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%221271.0%22%20cy%3D%22629.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%22480.4%22%20cy%3D%22445.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.67%22%2F%3E%3Ccircle%20cx%3D%22460.7%22%20cy%3D%22882.2%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.52%22%2F%3E%3Ccircle%20cx%3D%22263.9%22%20cy%3D%22307.9%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%221539.2%22%20cy%3D%2269.9%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.56%22%2F%3E%3Ccircle%20cx%3D%221400.8%22%20cy%3D%22282.4%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.41%22%2F%3E%3Ccircle%20cx%3D%22794.7%22%20cy%3D%22717.2%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.74%22%2F%3E%3Ccircle%20cx%3D%221511.5%22%20cy%3D%22426.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.22%22%2F%3E%3Ccircle%20cx%3D%221169.9%22%20cy%3D%22278.6%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%221315.1%22%20cy%3D%22256.1%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%22555.2%22%20cy%3D%22846.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.29%22%2F%3E%3Ccircle%20cx%3D%22187.4%22%20cy%3D%2253.1%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%22396.2%22%20cy%3D%22351.9%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%22718.7%22%20cy%3D%22494.5%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%221382.4%22%20cy%3D%22250.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.84%22%2F%3E%3Ccircle%20cx%3D%221092.4%22%20cy%3D%22342.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%22281.9%22%20cy%3D%22208.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.19%22%2F%3E%3Ccircle%20cx%3D%221329.7%22%20cy%3D%22164.1%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.18%22%2F%3E%3Ccircle%20cx%3D%22670.3%22%20cy%3D%22332.3%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.39%22%2F%3E%3Ccircle%20cx%3D%22200.8%22%20cy%3D%22773.3%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.62%22%2F%3E%3Ccircle%20cx%3D%221183.7%22%20cy%3D%22411.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.71%22%2F%3E%3Ccircle%20cx%3D%22627.8%22%20cy%3D%22359.1%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22640.7%22%20cy%3D%22171.5%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22175.9%22%20cy%3D%22540.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.18%22%2F%3E%3Ccircle%20cx%3D%22242.0%22%20cy%3D%2291.3%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.59%22%2F%3E%3Ccircle%20cx%3D%22112.5%22%20cy%3D%22187.2%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%22403.6%22%20cy%3D%22312.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22184.6%22%20cy%3D%22439.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22499.0%22%20cy%3D%22129.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.41%22%2F%3E%3Ccircle%20cx%3D%22423.6%22%20cy%3D%22746.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.53%22%2F%3E%3Ccircle%20cx%3D%22328.3%22%20cy%3D%22856.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%22869.1%22%20cy%3D%2224.3%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%221028.7%22%20cy%3D%2281.9%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.53%22%2F%3E%3Ccircle%20cx%3D%221453.2%22%20cy%3D%22320.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.54%22%2F%3E%3Ccircle%20cx%3D%221246.5%22%20cy%3D%22296.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.59%22%2F%3E%3Ccircle%20cx%3D%221261.4%22%20cy%3D%22682.5%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.72%22%2F%3E%3Ccircle%20cx%3D%221309.3%22%20cy%3D%22665.9%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.31%22%2F%3E%3Ccircle%20cx%3D%22788.5%22%20cy%3D%22657.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.71%22%2F%3E%3Ccircle%20cx%3D%22755.6%22%20cy%3D%22174.3%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.82%22%2F%3E%3Ccircle%20cx%3D%22715.6%22%20cy%3D%22843.3%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.82%22%2F%3E%3Ccircle%20cx%3D%22583.4%22%20cy%3D%22198.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.49%22%2F%3E%3Ccircle%20cx%3D%22540.4%22%20cy%3D%22434.4%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.74%22%2F%3E%3Ccircle%20cx%3D%22767.2%22%20cy%3D%22587.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221056.9%22%20cy%3D%22818.8%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.68%22%2F%3E%3Ccircle%20cx%3D%22764.9%22%20cy%3D%22160.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%221281.3%22%20cy%3D%22874.5%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.49%22%2F%3E%3Ccircle%20cx%3D%221189.4%22%20cy%3D%2276.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.29%22%2F%3E%3Ccircle%20cx%3D%22203.3%22%20cy%3D%22136.0%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.72%22%2F%3E%3Ccircle%20cx%3D%22233.9%22%20cy%3D%22743.9%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.62%22%2F%3E%3Ccircle%20cx%3D%22560.7%22%20cy%3D%22493.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.19%22%2F%3E%3Ccircle%20cx%3D%221279.0%22%20cy%3D%22653.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.53%22%2F%3E%3Ccircle%20cx%3D%221493.8%22%20cy%3D%22390.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22337.7%22%20cy%3D%22226.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.52%22%2F%3E%3Ccircle%20cx%3D%221221.9%22%20cy%3D%22293.4%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22209.7%22%20cy%3D%22819.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.78%22%2F%3E%3Ccircle%20cx%3D%221060.0%22%20cy%3D%22733.5%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%221468.4%22%20cy%3D%22451.5%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%22816.9%22%20cy%3D%22785.5%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.59%22%2F%3E%3Ccircle%20cx%3D%221241.7%22%20cy%3D%22134.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221160.3%22%20cy%3D%22500.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.64%22%2F%3E%3Ccircle%20cx%3D%22849.2%22%20cy%3D%22434.2%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%2290.9%22%20cy%3D%22172.2%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.7%22%2F%3E%3Ccircle%20cx%3D%22812.3%22%20cy%3D%22505.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22980.0%22%20cy%3D%22455.0%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.31%22%2F%3E%3Ccircle%20cx%3D%22443.5%22%20cy%3D%22457.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.52%22%2F%3E%3Ccircle%20cx%3D%22396.2%22%20cy%3D%22470.9%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.8%22%2F%3E%3Ccircle%20cx%3D%221428.4%22%20cy%3D%22182.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%22194.6%22%20cy%3D%22397.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.63%22%2F%3E%3Ccircle%20cx%3D%22685.3%22%20cy%3D%22191.4%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.71%22%2F%3E%3Ccircle%20cx%3D%221435.2%22%20cy%3D%22139.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.61%22%2F%3E%3Ccircle%20cx%3D%22585.9%22%20cy%3D%22227.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.83%22%2F%3E%3Ccircle%20cx%3D%22351.3%22%20cy%3D%22857.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%22260.5%22%20cy%3D%22601.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.29%22%2F%3E%3Ccircle%20cx%3D%22690.4%22%20cy%3D%22464.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22570.6%22%20cy%3D%2283.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.19%22%2F%3E%3Ccircle%20cx%3D%22886.5%22%20cy%3D%22396.4%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.44%22%2F%3E%3Ccircle%20cx%3D%22827.9%22%20cy%3D%22265.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.26%22%2F%3E%3Ccircle%20cx%3D%221469.7%22%20cy%3D%22205.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%22435.1%22%20cy%3D%22815.3%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.36%22%2F%3E%3Ccircle%20cx%3D%22207.3%22%20cy%3D%22380.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22413.8%22%20cy%3D%22134.4%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.56%22%2F%3E%3Ccircle%20cx%3D%221120.7%22%20cy%3D%2280.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.72%22%2F%3E%3Ccircle%20cx%3D%22293.4%22%20cy%3D%22805.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.81%22%2F%3E%3Ccircle%20cx%3D%221015.1%22%20cy%3D%22721.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.59%22%2F%3E%3Ccircle%20cx%3D%22355.9%22%20cy%3D%22238.0%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22542.6%22%20cy%3D%22497.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.6%22%2F%3E%3Ccircle%20cx%3D%2269.1%22%20cy%3D%22638.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.83%22%2F%3E%3Ccircle%20cx%3D%22419.0%22%20cy%3D%22163.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.6%22%2F%3E%3Ccircle%20cx%3D%22849.7%22%20cy%3D%22185.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.52%22%2F%3E%3Ccircle%20cx%3D%22284.6%22%20cy%3D%22312.3%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%2259.1%22%20cy%3D%2216.6%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22303.1%22%20cy%3D%22427.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.25%22%2F%3E%3Ccircle%20cx%3D%221310.3%22%20cy%3D%22389.0%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%221422.0%22%20cy%3D%22873.3%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.64%22%2F%3E%3Ccircle%20cx%3D%221571.9%22%20cy%3D%22308.4%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.67%22%2F%3E%3Ccircle%20cx%3D%22223.6%22%20cy%3D%22890.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.74%22%2F%3E%3Ccircle%20cx%3D%2222.8%22%20cy%3D%22562.9%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.47%22%2F%3E%3Ccircle%20cx%3D%2288.6%22%20cy%3D%22598.7%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.76%22%2F%3E%3Ccircle%20cx%3D%221072.9%22%20cy%3D%22253.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.64%22%2F%3E%3Ccircle%20cx%3D%2272.4%22%20cy%3D%22166.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22421.2%22%20cy%3D%22865.6%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%2255.1%22%20cy%3D%22794.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.42%22%2F%3E%3Ccircle%20cx%3D%221.7%22%20cy%3D%22343.5%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.37%22%2F%3E%3Ccircle%20cx%3D%221049.6%22%20cy%3D%22223.4%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221307.3%22%20cy%3D%22129.5%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%2236.0%22%20cy%3D%22273.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221532.2%22%20cy%3D%22767.9%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.62%22%2F%3E%3Ccircle%20cx%3D%221145.6%22%20cy%3D%22791.2%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.69%22%2F%3E%3Ccircle%20cx%3D%221153.1%22%20cy%3D%22444.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.67%22%2F%3E%3Ccircle%20cx%3D%221029.2%22%20cy%3D%2239.4%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.78%22%2F%3E%3Ccircle%20cx%3D%221003.7%22%20cy%3D%22660.5%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%22838.0%22%20cy%3D%22453.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22934.5%22%20cy%3D%22803.5%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.82%22%2F%3E%3Ccircle%20cx%3D%221028.6%22%20cy%3D%2276.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%22577.1%22%20cy%3D%2294.4%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%221004.4%22%20cy%3D%22563.6%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.34%22%2F%3E%3Ccircle%20cx%3D%22422.1%22%20cy%3D%22411.3%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.68%22%2F%3E%3Ccircle%20cx%3D%22804.8%22%20cy%3D%22481.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.53%22%2F%3E%3Ccircle%20cx%3D%221193.2%22%20cy%3D%22426.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%22375.7%22%20cy%3D%22680.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.68%22%2F%3E%3Ccircle%20cx%3D%221561.2%22%20cy%3D%22444.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%221456.7%22%20cy%3D%22258.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.59%22%2F%3E%3Ccircle%20cx%3D%221028.4%22%20cy%3D%2269.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%221042.5%22%20cy%3D%22623.6%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.56%22%2F%3E%3Ccircle%20cx%3D%2220.0%22%20cy%3D%2254.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.83%22%2F%3E%3Ccircle%20cx%3D%22159.2%22%20cy%3D%22195.9%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.37%22%2F%3E%3Ccircle%20cx%3D%22826.5%22%20cy%3D%22418.2%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.69%22%2F%3E%3Ccircle%20cx%3D%221589.3%22%20cy%3D%22494.2%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.84%22%2F%3E%3Ccircle%20cx%3D%221498.0%22%20cy%3D%2215.8%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%22810.6%22%20cy%3D%22895.1%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.44%22%2F%3E%3Ccircle%20cx%3D%221466.5%22%20cy%3D%22837.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.57%22%2F%3E%3Ccircle%20cx%3D%22226.8%22%20cy%3D%22471.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%221312.3%22%20cy%3D%22457.9%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.65%22%2F%3E%3Ccircle%20cx%3D%22370.2%22%20cy%3D%22807.9%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.44%22%2F%3E%3Ccircle%20cx%3D%22254.5%22%20cy%3D%22855.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22483.1%22%20cy%3D%22126.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.43%22%2F%3E%3Ccircle%20cx%3D%22193.5%22%20cy%3D%22298.2%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.68%22%2F%3E%3Ccircle%20cx%3D%221342.6%22%20cy%3D%22108.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.66%22%2F%3E%3Ccircle%20cx%3D%221442.5%22%20cy%3D%22260.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.22%22%2F%3E%3Ccircle%20cx%3D%22624.3%22%20cy%3D%22783.0%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.42%22%2F%3E%3Ccircle%20cx%3D%22684.9%22%20cy%3D%22247.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.37%22%2F%3E%3Ccircle%20cx%3D%2282.6%22%20cy%3D%22595.8%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.81%22%2F%3E%3Ccircle%20cx%3D%22398.9%22%20cy%3D%22239.2%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.39%22%2F%3E%3Ccircle%20cx%3D%221237.1%22%20cy%3D%22706.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%221299.1%22%20cy%3D%22567.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%221151.3%22%20cy%3D%2244.5%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22983.9%22%20cy%3D%22124.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.51%22%2F%3E%3Ccircle%20cx%3D%221459.0%22%20cy%3D%22495.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22549.9%22%20cy%3D%22268.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.67%22%2F%3E%3Ccircle%20cx%3D%221044.5%22%20cy%3D%22365.6%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%22891.7%22%20cy%3D%22354.9%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.61%22%2F%3E%3Ccircle%20cx%3D%22120.3%22%20cy%3D%22450.5%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%22724.8%22%20cy%3D%22299.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.47%22%2F%3E%3Ccircle%20cx%3D%22876.5%22%20cy%3D%22219.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.41%22%2F%3E%3Ccircle%20cx%3D%22145.8%22%20cy%3D%22215.2%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.72%22%2F%3E%3Ccircle%20cx%3D%22323.4%22%20cy%3D%2218.1%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.44%22%2F%3E%3Ccircle%20cx%3D%221193.3%22%20cy%3D%22189.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.41%22%2F%3E%3Ccircle%20cx%3D%2299.3%22%20cy%3D%22249.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.26%22%2F%3E%3Ccircle%20cx%3D%22805.4%22%20cy%3D%22566.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221434.9%22%20cy%3D%22346.1%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%221526.3%22%20cy%3D%22763.8%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%22680.3%22%20cy%3D%22687.3%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.83%22%2F%3E%3Ccircle%20cx%3D%22783.7%22%20cy%3D%2265.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%221555.6%22%20cy%3D%22223.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.33%22%2F%3E%3Ccircle%20cx%3D%22243.3%22%20cy%3D%22874.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.81%22%2F%3E%3Ccircle%20cx%3D%221154.8%22%20cy%3D%22582.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221243.0%22%20cy%3D%221.2%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.34%22%2F%3E%3Ccircle%20cx%3D%221471.9%22%20cy%3D%22581.0%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.82%22%2F%3E%3Ccircle%20cx%3D%221002.4%22%20cy%3D%22475.4%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.65%22%2F%3E%3Ccircle%20cx%3D%22179.4%22%20cy%3D%2263.3%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.81%22%2F%3E%3Ccircle%20cx%3D%22306.7%22%20cy%3D%22234.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.18%22%2F%3E%3Ccircle%20cx%3D%22860.0%22%20cy%3D%22896.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.82%22%2F%3E%3Ccircle%20cx%3D%221031.3%22%20cy%3D%22795.4%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.53%22%2F%3E%3Ccircle%20cx%3D%22875.2%22%20cy%3D%2226.4%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.65%22%2F%3E%3Ccircle%20cx%3D%22491.8%22%20cy%3D%2219.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%221035.5%22%20cy%3D%2273.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.63%22%2F%3E%3Ccircle%20cx%3D%221480.3%22%20cy%3D%22204.1%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.65%22%2F%3E%3Ccircle%20cx%3D%221149.3%22%20cy%3D%22326.1%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.31%22%2F%3E%3Ccircle%20cx%3D%221275.3%22%20cy%3D%22665.2%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%22793.1%22%20cy%3D%22180.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.33%22%2F%3E%3Ccircle%20cx%3D%22354.3%22%20cy%3D%22684.4%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.25%22%2F%3E%3Ccircle%20cx%3D%22997.8%22%20cy%3D%22549.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221456.6%22%20cy%3D%2250.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%22629.5%22%20cy%3D%22191.7%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%2282.9%22%20cy%3D%2254.1%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%221139.3%22%20cy%3D%22282.8%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%221490.6%22%20cy%3D%22296.3%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.62%22%2F%3E%3Ccircle%20cx%3D%22839.7%22%20cy%3D%22420.9%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.63%22%2F%3E%3Ccircle%20cx%3D%22605.8%22%20cy%3D%22336.5%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.48%22%2F%3E%3Ccircle%20cx%3D%22174.3%22%20cy%3D%2270.4%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.42%22%2F%3E%3Ccircle%20cx%3D%221528.8%22%20cy%3D%22111.3%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.43%22%2F%3E%3Ccircle%20cx%3D%221230.0%22%20cy%3D%22277.8%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%221128.4%22%20cy%3D%22176.1%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.8%22%2F%3E%3Ccircle%20cx%3D%22308.8%22%20cy%3D%22327.8%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.2%22%2F%3E%3Ccircle%20cx%3D%22657.3%22%20cy%3D%22730.6%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%2255.8%22%20cy%3D%2256.3%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.35%22%2F%3E%3Ccircle%20cx%3D%221195.7%22%20cy%3D%22808.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.42%22%2F%3E%3Ccircle%20cx%3D%22536.0%22%20cy%3D%22858.4%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.36%22%2F%3E%3Ccircle%20cx%3D%221146.6%22%20cy%3D%22284.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%221154.5%22%20cy%3D%22536.0%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.81%22%2F%3E%3Ccircle%20cx%3D%22104.5%22%20cy%3D%22743.4%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221530.8%22%20cy%3D%22858.5%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.71%22%2F%3E%3Ccircle%20cx%3D%221461.7%22%20cy%3D%22733.3%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.8%22%2F%3E%3Ccircle%20cx%3D%22292.7%22%20cy%3D%22722.3%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%221107.4%22%20cy%3D%22136.2%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%22511.3%22%20cy%3D%22325.7%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.23%22%2F%3E%3Ccircle%20cx%3D%22315.7%22%20cy%3D%22677.6%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.45%22%2F%3E%3Ccircle%20cx%3D%221039.3%22%20cy%3D%22433.5%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.4%22%2F%3E%3Ccircle%20cx%3D%221568.4%22%20cy%3D%22795.1%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.36%22%2F%3E%3Ccircle%20cx%3D%22134.5%22%20cy%3D%2286.8%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.84%22%2F%3E%3Ccircle%20cx%3D%221555.4%22%20cy%3D%22155.9%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.46%22%2F%3E%3Ccircle%20cx%3D%22992.5%22%20cy%3D%22606.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.54%22%2F%3E%3Ccircle%20cx%3D%221238.2%22%20cy%3D%22683.6%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%22907.0%22%20cy%3D%22335.7%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.35%22%2F%3E%3Ccircle%20cx%3D%22703.0%22%20cy%3D%22167.2%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.28%22%2F%3E%3Ccircle%20cx%3D%221414.7%22%20cy%3D%22520.5%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.22%22%2F%3E%3Ccircle%20cx%3D%22402.6%22%20cy%3D%22221.4%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.34%22%2F%3E%3Ccircle%20cx%3D%221293.5%22%20cy%3D%22588.0%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.25%22%2F%3E%3Ccircle%20cx%3D%22759.6%22%20cy%3D%22737.2%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.79%22%2F%3E%3Ccircle%20cx%3D%2264.6%22%20cy%3D%22264.3%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%22960.8%22%20cy%3D%22745.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.8%22%2F%3E%3Ccircle%20cx%3D%22595.6%22%20cy%3D%22779.5%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.58%22%2F%3E%3Ccircle%20cx%3D%221240.0%22%20cy%3D%22598.3%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.25%22%2F%3E%3Ccircle%20cx%3D%22953.8%22%20cy%3D%22558.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%22544.0%22%20cy%3D%2239.7%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%221171.6%22%20cy%3D%22822.6%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.73%22%2F%3E%3Ccircle%20cx%3D%22654.4%22%20cy%3D%22334.6%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.39%22%2F%3E%3Ccircle%20cx%3D%22325.5%22%20cy%3D%22715.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22653.1%22%20cy%3D%22716.3%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.55%22%2F%3E%3Ccircle%20cx%3D%221022.7%22%20cy%3D%2282.0%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.45%22%2F%3E%3Ccircle%20cx%3D%22433.9%22%20cy%3D%22889.4%22%20r%3D%221.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.39%22%2F%3E%3Ccircle%20cx%3D%221525.1%22%20cy%3D%22281.1%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.77%22%2F%3E%3Ccircle%20cx%3D%22662.5%22%20cy%3D%2216.4%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.61%22%2F%3E%3Ccircle%20cx%3D%22625.2%22%20cy%3D%22364.5%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.47%22%2F%3E%3Ccircle%20cx%3D%22250.5%22%20cy%3D%22102.2%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.45%22%2F%3E%3Ccircle%20cx%3D%221412.5%22%20cy%3D%22414.8%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.27%22%2F%3E%3Ccircle%20cx%3D%2282.7%22%20cy%3D%22128.2%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.24%22%2F%3E%3Ccircle%20cx%3D%22995.5%22%20cy%3D%22333.8%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.3%22%2F%3E%3Ccircle%20cx%3D%22556.7%22%20cy%3D%22145.6%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.8%22%2F%3E%3Ccircle%20cx%3D%22174.1%22%20cy%3D%22441.5%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.38%22%2F%3E%3Ccircle%20cx%3D%221339.7%22%20cy%3D%2239.1%22%20r%3D%221.0%22%20fill%3D%22%23fff%22%20opacity%3D%220.39%22%2F%3E%3Ccircle%20cx%3D%22972.2%22%20cy%3D%22572.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.79%22%2F%3E%3Ccircle%20cx%3D%22992.5%22%20cy%3D%22742.1%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.61%22%2F%3E%3Ccircle%20cx%3D%221370.5%22%20cy%3D%22558.9%22%20r%3D%221.2%22%20fill%3D%22%23fff%22%20opacity%3D%220.75%22%2F%3E%3Ccircle%20cx%3D%221326.7%22%20cy%3D%22164.7%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%221501.7%22%20cy%3D%22140.8%22%20r%3D%220.9%22%20fill%3D%22%23fff%22%20opacity%3D%220.26%22%2F%3E%3Ccircle%20cx%3D%22395.3%22%20cy%3D%22652.4%22%20r%3D%220.7%22%20fill%3D%22%23fff%22%20opacity%3D%220.21%22%2F%3E%3Ccircle%20cx%3D%22899.7%22%20cy%3D%22681.7%22%20r%3D%220.6%22%20fill%3D%22%23fff%22%20opacity%3D%220.63%22%2F%3E%3Ccircle%20cx%3D%22518.7%22%20cy%3D%22350.9%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22518.7%22%20cy%3D%22350.9%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22729.2%22%20cy%3D%22764.1%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22729.2%22%20cy%3D%22764.1%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%221244.9%22%20cy%3D%22584.1%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221244.9%22%20cy%3D%22584.1%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22493.1%22%20cy%3D%22224.3%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22493.1%22%20cy%3D%22224.3%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22622.7%22%20cy%3D%22330.7%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22622.7%22%20cy%3D%22330.7%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22805.7%22%20cy%3D%22160.9%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22805.7%22%20cy%3D%22160.9%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22887.5%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%225.6%22%20cy%3D%22887.5%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22744.4%22%20cy%3D%22402.1%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22744.4%22%20cy%3D%22402.1%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22989.7%22%20cy%3D%22737.1%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22989.7%22%20cy%3D%22737.1%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%221338.5%22%20cy%3D%22729.5%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221338.5%22%20cy%3D%22729.5%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22640.5%22%20cy%3D%2260.4%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22640.5%22%20cy%3D%2260.4%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%22573.7%22%20cy%3D%22328.8%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%22573.7%22%20cy%3D%22328.8%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%221283.7%22%20cy%3D%22453.9%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221283.7%22%20cy%3D%22453.9%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3Ccircle%20cx%3D%221051.4%22%20cy%3D%2236.6%22%20r%3D%222.6%22%20fill%3D%22%23cfe6ff%22%20opacity%3D%220.5%22%2F%3E%3Ccircle%20cx%3D%221051.4%22%20cy%3D%2236.6%22%20r%3D%226%22%20fill%3D%22%239fc6ff%22%20opacity%3D%220.10%22%2F%3E%3C%2Fsvg%3E');background-size:cover;background-position:center"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(58% 70% at 74% 48%, rgba(56,110,180,.30) 0%, rgba(30,60,110,.12) 42%, rgba(11,13,12,0) 72%)"></div>
+      <div class="absolute inset-0" style="background:radial-gradient(90% 100% at 18% 50%, rgba(11,13,12,.92) 0%, rgba(11,13,12,.55) 45%, rgba(11,13,12,0) 78%)"></div>
+    </div>
+
+    <div class="relative mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+      <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+
+        <div>
+          <p class="text-[12px] font-bold uppercase tracking-[.22em] text-lime">Our network</p>
+          <h1 class="mt-5 font-display text-[36px] font-extrabold leading-[1.06] tracking-tight text-white sm:text-[46px] lg:text-[54px]">
+            One yard.<br />A long reach.
+          </h1>
+          <p class="mt-6 max-w-xl text-[16px] leading-relaxed text-white/75 sm:text-[17px]">
+            Everything loads at our Luton yard, minutes from the M1 at junctions 10 and 11. From
+            there a driver can be on the M25, the M6 or the A1(M) inside the hour, which is why we
+            can offer earlier collections and later cut-offs than an operator buried in a city.
+          </p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#cut-offs" class="inline-flex h-[52px] items-center rounded-full bg-lime px-7 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+              See cut-off times
+            </a>
+            <a href="contact.html" class="inline-flex h-[52px] items-center rounded-full border border-white/25 px-7 text-[15px] font-semibold text-white transition hover:border-white/60 hover:bg-white/5">
+              Talk to a planner
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="relative mx-auto aspect-square w-full max-w-[520px]">
+            <canvas id="globe-canvas" tabindex="0" role="img"
+                    aria-label="Rotating globe. Focus or hover to zoom to the United Kingdom and show the delivery cities, which are also listed below."
+                    class="h-full w-full cursor-pointer rounded-full outline-none focus-visible:ring-4 focus-visible:ring-lime/50"></canvas>
+
+            <div id="globe-tip"
+                 class="pointer-events-none absolute hidden -translate-x-1/2 -translate-y-full rounded-xl bg-white px-3.5 py-2.5 shadow-lift"></div>
+
+            <button id="globe-back" type="button"
+                    class="absolute bottom-2 left-1/2 hidden -translate-x-1/2 rounded-full bg-white px-5 py-2.5 text-[14px] font-semibold text-ink shadow-lift">
+              Back to globe
+            </button>
+          </div>
+
+          <p id="globe-hint" class="mt-5 text-center text-[13px] font-semibold uppercase tracking-[.14em] text-white/50 transition-opacity duration-500">
+            Hover the globe to see where we deliver
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COVERAGE STATS ════════════════════════════════════════════════ -->
+  <section class="border-b border-line bg-white">
+    <div class="mx-auto max-w-shell px-4 py-14 sm:px-6 lg:px-10">
+      <dl class="grid gap-10 sm:grid-cols-3">
+        <div class="text-center">
+          <dt class="sr-only">Yard, at Luton LU3</dt>
+          <dd class="font-display text-[52px] font-black leading-none tracking-tight sm:text-[64px]">1</dd>
+          <p class="mt-3 text-[13px] font-semibold uppercase tracking-[.14em] text-ink-mute">Yard, at Luton LU3</p>
+        </div>
+        <div class="text-center">
+          <dt class="sr-only">Vehicle types on the fleet</dt>
+          <dd class="font-display text-[52px] font-black leading-none tracking-tight sm:text-[64px]">9</dd>
+          <p class="mt-3 text-[13px] font-semibold uppercase tracking-[.14em] text-ink-mute">Vehicle types on the fleet</p>
+        </div>
+        <div class="text-center">
+          <dt class="sr-only">Days a week we collect</dt>
+          <dd class="font-display text-[52px] font-black leading-none tracking-tight sm:text-[64px]">6</dd>
+          <p class="mt-3 text-[13px] font-semibold uppercase tracking-[.14em] text-ink-mute">Days a week we collect</p>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══ DEPOTS ════════════════════════════════════════════════════════ -->
+  <section class="bg-mist">
+    <div class="mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-[30px] font-extrabold leading-[1.12] tracking-tight sm:text-[38px]">
+          Where we deliver
+        </h2>
+        <p class="mt-5 text-[16px] leading-relaxed text-ink-mute sm:text-[17px]">
+          Towns and cities we run to regularly, grouped by region. If yours is not on the list it
+          does not mean we cannot get there &mdash; ring us and ask.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-[20px] border border-line bg-white p-6 sm:p-7">
+          <h3 class="font-display text-[18px] font-extrabold tracking-tight">England — North</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-ink-mute">
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Manchester</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Leeds</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Liverpool</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Newcastle</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Sheffield</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Hull</li>
+          </ul>
+        </div>
+        <div class="rounded-[20px] border border-line bg-white p-6 sm:p-7">
+          <h3 class="font-display text-[18px] font-extrabold tracking-tight">England — Midlands</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-ink-mute">
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Birmingham</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Nottingham</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Leicester</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Coventry</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Stoke</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Derby</li>
+          </ul>
+        </div>
+        <div class="rounded-[20px] border border-line bg-white p-6 sm:p-7">
+          <h3 class="font-display text-[18px] font-extrabold tracking-tight">England — South</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-ink-mute">
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Luton (our yard)</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>London ×3</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Bristol</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Southampton</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Reading</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Exeter</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Plymouth</li>
+          </ul>
+        </div>
+        <div class="rounded-[20px] border border-line bg-white p-6 sm:p-7">
+          <h3 class="font-display text-[18px] font-extrabold tracking-tight">Scotland, Wales &amp; NI</h3>
+          <ul class="mt-5 space-y-3 text-[15px] text-ink-mute">
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Glasgow</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Edinburgh</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Aberdeen</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Inverness</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Cardiff</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Swansea</li>
+            <li class="flex items-center gap-2.5"><span aria-hidden="true" class="h-1.5 w-1.5 shrink-0 rounded-full bg-lime"></span>Belfast</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CUT-OFF TIMES ═════════════════════════════════════════════════ -->
+  <section id="cut-offs" class="scroll-mt-28 bg-white">
+    <div class="mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+      <h2 class="font-display text-[30px] font-extrabold leading-[1.12] tracking-tight sm:text-[38px]">
+        Cut-off times by region
+      </h2>
+      <p class="mt-5 max-w-2xl text-[16px] leading-relaxed text-ink-mute sm:text-[17px]">
+        Book before the cut-off and your consignment makes that night&rsquo;s trunk run.
+      </p>
+
+      <div class="mt-10 overflow-x-auto">
+        <table class="w-full min-w-[640px] border-collapse text-left text-[15px]">
+          <thead>
+            <tr class="border-b-2 border-ink">
+              <th scope="col" class="pb-4 pr-4 text-[12px] font-bold uppercase tracking-[.14em]">Region</th>
+              <th scope="col" class="pb-4 pr-4 text-[12px] font-bold uppercase tracking-[.14em]">Service</th>
+              <th scope="col" class="pb-4 pr-4 text-[12px] font-bold uppercase tracking-[.14em]">Cut-off</th>
+              <th scope="col" class="pb-4 text-[12px] font-bold uppercase tracking-[.14em]">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-line last:border-0">
+              <td class="py-4 pr-4 font-semibold">Luton &amp; the South East</td>
+              <td class="py-4 pr-4"><span class="rounded-full bg-lime/25 px-3 py-1 text-[13px] font-bold">Same day</span></td>
+              <td class="py-4 pr-4 font-mono text-[14px] font-semibold">16:00</td>
+              <td class="py-4 text-ink-mute">Collection to delivery inside the day</td>
+            </tr>
+            <tr class="border-b border-line last:border-0">
+              <td class="py-4 pr-4 font-semibold">England &amp; Wales, mainland</td>
+              <td class="py-4 pr-4"><span class="rounded-full bg-lime/25 px-3 py-1 text-[13px] font-bold">Next day</span></td>
+              <td class="py-4 pr-4 font-mono text-[14px] font-semibold">18:00</td>
+              <td class="py-4 text-ink-mute">Pre-10:30 and pre-12:00 upgrades available</td>
+            </tr>
+            <tr class="border-b border-line last:border-0">
+              <td class="py-4 pr-4 font-semibold">Scotland, central belt</td>
+              <td class="py-4 pr-4"><span class="rounded-full bg-lime/25 px-3 py-1 text-[13px] font-bold">Next day</span></td>
+              <td class="py-4 pr-4 font-mono text-[14px] font-semibold">16:00</td>
+              <td class="py-4 text-ink-mute">Glasgow and Edinburgh on the overnight trunk</td>
+            </tr>
+            <tr class="border-b border-line last:border-0">
+              <td class="py-4 pr-4 font-semibold">Highlands, islands &amp; NI</td>
+              <td class="py-4 pr-4"><span class="rounded-full bg-lime/25 px-3 py-1 text-[13px] font-bold">Two day</span></td>
+              <td class="py-4 pr-4 font-mono text-[14px] font-semibold">15:00</td>
+              <td class="py-4 text-ink-mute">Ferry and onward-carrier dependent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLOSING CTA ═══════════════════════════════════════════════════ -->
+  <section class="bg-ink">
+    <div class="mx-auto max-w-shell px-4 py-16 text-center sm:px-6 lg:px-10 lg:py-20">
+      <h2 class="mx-auto max-w-3xl font-display text-[28px] font-extrabold leading-[1.14] tracking-tight text-white sm:text-[36px] lg:text-[40px]">
+        Not sure we reach your customers? We do.
+      </h2>
+      <a href="contact.html"
+         class="group mt-9 inline-flex h-[58px] items-center gap-4 rounded-full bg-lime pl-7 pr-2.5 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+        Ask about your route
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-ink text-lime transition group-hover:translate-x-0.5">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
+  <footer class="border-t border-white/10 bg-ink text-white">
+    <div class="mx-auto max-w-shell px-4 py-14 sm:px-6 lg:px-10 lg:py-16">
+
+      <!-- Logo + contact actions -->
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <a href="index.html" aria-label="JK Smart Logistics home" class="w-fit">
+          <img src="images/clean/logo.png" alt="JK Smart Logistics Ltd" class="h-16 w-auto sm:h-20 brightness-200" width="640" height="321" />
+        </a>
+
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <p class="font-display text-[19px] font-extrabold tracking-tight">Connect with Our Team</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="contact.html" class="inline-flex h-12 items-center gap-2.5 rounded-full bg-lime px-6 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+              Contact JK
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Company</h3>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="about.html" class="text-[15px] text-white/65 transition hover:text-lime">About Us</a></li>
+            <li><a href="network.html" class="text-[15px] text-white/65 transition hover:text-lime">Our Fleet</a></li>
+            <li><a href="network.html" class="text-[15px] text-white/65 transition hover:text-lime">Depot Network</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Sustainability</a></li>
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Services</h3>
+          <ul class="mt-5 grid grid-cols-2 gap-x-5 gap-y-3.5">
+            <li><a href="index.html#courier" class="text-[15px] text-white/65 transition hover:text-lime">Same-Day Courier</a></li>
+            <li><a href="index.html#courier" class="text-[15px] text-white/65 transition hover:text-lime">Next Day &amp; Overnight</a></li>
+            <li><a href="index.html#courier" class="text-[15px] text-white/65 transition hover:text-lime">Parcels &amp; Documents</a></li>
+            <li><a href="index.html#courier" class="text-[15px] text-white/65 transition hover:text-lime">Multi-Drop Distribution</a></li>
+            <li><a href="index.html#courier" class="text-[15px] text-white/65 transition hover:text-lime">Planned Routes</a></li>
+            <li><a href="index.html#freight" class="text-[15px] text-white/65 transition hover:text-lime">Pallet Freight</a></li>
+            <li><a href="index.html#freight" class="text-[15px] text-white/65 transition hover:text-lime">Full Truck Load</a></li>
+            <li><a href="index.html#freight" class="text-[15px] text-white/65 transition hover:text-lime">Oversized &amp; Awkward Loads</a></li>
+            <li><a href="index.html#specialist" class="text-[15px] text-white/65 transition hover:text-lime">Removals &amp; Bulky Goods</a></li>
+            <li><a href="index.html#specialist" class="text-[15px] text-white/65 transition hover:text-lime">Warehousing &amp; 3PL</a></li>
+          </ul>
+        </div>
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Support</h3>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Request a Quote</a></li>
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Book a Collection</a></li>
+            <li><a href="network.html" class="text-[15px] text-white/65 transition hover:text-lime">Coverage &amp; Cut-offs</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Delivery FAQs</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Make a Claim</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Report an Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Stay up to date with JK Smart</h3>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/65">
+            Service updates, depot news and seasonal cut-off dates. One email a month, no more.
+          </p>
+          <form id="newsletter" class="mt-5 flex flex-col gap-3" novalidate>
+            <label class="sr-only" for="news-email">Email address</label>
+            <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@company.co.uk"
+                   class="h-12 w-full rounded-full border border-white/25 bg-white/10 px-5 text-[15px] text-white outline-none transition placeholder:text-white/45 focus:border-lime focus:bg-white/15" />
+            <button type="submit"
+                    class="group inline-flex h-12 w-fit items-center gap-3 rounded-full bg-white pl-6 pr-2 text-[15px] font-bold text-ink transition hover:bg-white/90">
+              Register Now
+              <span class="grid h-8 w-8 place-items-center rounded-full bg-ink text-lime transition group-hover:translate-x-0.5">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </span>
+            </button>
+          </form>
+          <p id="news-msg" class="mt-3 hidden text-[14px] font-medium"></p>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="mt-14 flex flex-col gap-5 border-t border-white/15 pt-8 lg:flex-row lg:items-center lg:justify-between">
+        <p class="text-[13px] text-white/50">
+          &copy; 2026 JK Smart Logistics Ltd. Registered in England &amp; Wales. All rights reserved.
+        </p>
+        <ul class="flex flex-wrap gap-x-7 gap-y-2 text-[13px]">
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Privacy Policy</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Cookie Policy</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Modern Slavery Statement</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SIDE TAB ══════════════════════════════════════════════════════ -->
+  <a href="contact.html"
+     class="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 rounded-l-xl bg-lime px-3 py-5 text-[13px] font-bold uppercase tracking-[.14em] text-ink shadow-lift transition hover:bg-lime-dark lg:block"
+     style="writing-mode: vertical-rl;">
+    Enquire Now
+  </a>
+
+  
+
+  <script src="js/vendor/d3-array.min.js"></script>
+  <script src="js/vendor/d3-geo.min.js"></script>
+  <script src="js/data/earth-texture.js"></script>
+  <script src="js/data/geo-world.js"></script>
+  <script src="js/data/geo-uk.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/globe.js" defer></script>
+</body>
+</html>

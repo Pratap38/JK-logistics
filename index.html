@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JK Logistics — UK Freight, Haulage &amp; Supply Chain</title>
+  <meta name="description" content="Luton-based haulage and courier company. Same-day, next-day, multi-drop, pallet freight, full loads, removals and warehousing on our own fleet with our own drivers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:   { DEFAULT: '#0B0D0C', soft: '#1A1D1B', mute: '#5A615C' },
+            lime:  { DEFAULT: '#C6F24E', dark: '#A8D92F', deep: '#6E9418' },
+            mist:  '#F4F6F3',
+            line:  '#E4E8E2',
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['Archivo', 'Inter', 'ui-sans-serif', 'sans-serif'],
+          },
+          maxWidth: { shell: '1440px' },
+          boxShadow: {
+            nav:  '0 2px 24px -6px rgba(11,13,12,.14), 0 0 0 1px rgba(11,13,12,.04)',
+            lift: '0 18px 40px -18px rgba(11,13,12,.45)',
+            card: '0 24px 60px -24px rgba(11,13,12,.35), 0 0 0 1px rgba(11,13,12,.05)',
+          },
+          keyframes: {
+            fadeUp: { '0%': { opacity: '0', transform: 'translateY(18px)' }, '100%': { opacity: '1', transform: 'none' } },
+          },
+          animation: {
+            fadeUp: 'fadeUp .7s cubic-bezier(.22,.9,.3,1) both',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { -webkit-font-smoothing: antialiased; }
+    .u-link { position: relative; }
+    .u-link::after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px;
+      background: #0B0D0C; transform: scaleX(0); transform-origin: left;
+      transition: transform .28s cubic-bezier(.22,.9,.3,1);
+    }
+    .u-link:hover::after { transform: scaleX(1); }
+    /* Service card reveal: hidden below the image, slides up on hover,
+       keyboard focus, or tap (.is-open is set by JS for touch). */
+    .reveal {
+      transform: translateY(100%);
+      transition: transform .5s cubic-bezier(.22,.9,.3,1);
+      will-change: transform;
+    }
+    .group:hover .reveal,
+    .group:focus-within .reveal,
+    .group.is-open .reveal { transform: translateY(0); }
+    .group.is-open [data-reveal] svg { transform: rotate(180deg); }
+
+    /* Fleet rail: native scroll + snap, without the visible scrollbar. */
+    #fleet-track { scrollbar-width: none; -ms-overflow-style: none; }
+    #fleet-track::-webkit-scrollbar { display: none; }
+    #fleet-track:focus-visible { outline: 2px solid #6E9418; outline-offset: 4px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-ink antialiased">
+
+  <!-- ══ ANNOUNCEMENT BANNER ═══════════════════════════════════════════ -->
+  <div id="announce" class="relative z-50 bg-ink text-white">
+    <div class="mx-auto flex max-w-shell items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-10">
+      <span class="hidden shrink-0 rounded-full bg-lime px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-ink sm:inline-block">New</span>
+      <p class="flex-1 text-[13px] leading-snug text-white/85">
+        Collections across the UK six days a week, from one Luton hub.
+        <a href="contact.html" class="ml-1 font-semibold text-lime underline-offset-4 hover:underline">Get a quote &rsaquo;</a>
+      </p>
+      <button type="button" data-dismiss="#announce" aria-label="Dismiss announcement"
+              class="shrink-0 rounded-full p-1 text-white/60 transition hover:bg-white/10 hover:text-white">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ HEADER ════════════════════════════════════════════════════════ -->
+  <header id="site-header" class="sticky top-0 z-40 bg-white transition-shadow duration-300">
+
+    <!-- Utility / contact bar -->
+    <div class="hidden border-b border-line lg:block">
+      <div class="mx-auto flex max-w-shell items-center gap-6 px-6 py-2.5 text-[13px] text-ink-mute lg:px-10">
+
+        <a href="tel:+447587543669" class="flex items-center gap-2 font-medium transition hover:text-ink">
+          <svg class="h-4 w-4 text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.5 4-2 1.4a12.5 12.5 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+          +44 7587 543669
+        </a>
+        <a href="mailto:r.singh@jksmartlogistics.co.uk" class="flex items-center gap-2 font-medium transition hover:text-ink">
+          <svg class="h-4 w-4 text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.6 6.5 8.4 6 8.4-6"/></svg>
+          r.singh@jksmartlogistics.co.uk
+        </a>
+
+        <div class="ml-auto flex items-center gap-6">
+          <button type="button" class="flex items-center gap-1.5 transition hover:text-ink">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18"/></svg>
+            United Kingdom — English
+            <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <div class="mx-auto max-w-shell px-4 py-3 sm:px-6 lg:px-10">
+      <nav class="relative flex items-center gap-4 rounded-2xl bg-white px-4 py-3 shadow-nav lg:gap-8 lg:px-6" aria-label="Primary">
+
+        <!-- Menu (mobile only, sits left) -->
+        <button id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                class="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-ink transition hover:bg-mist lg:hidden">
+          <span class="sr-only">Open menu</span>
+          <svg id="icon-open"  class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="icon-close" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+
+        <!-- Logo: centred on phones, left-aligned from lg -->
+        <a href="#" aria-label="JK Smart Logistics home"
+           class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:static lg:translate-x-0 lg:translate-y-0 lg:shrink-0">
+          <img src="images/clean/logo.png" alt="JK Smart Logistics Ltd"
+               class="h-10 w-auto sm:h-12 lg:h-14" width="640" height="321" />
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="ml-2 hidden items-center gap-7 text-[15px] font-medium lg:flex">
+          <li><a href="#services"   class="u-link py-2 transition hover:text-ink-soft">Services</a></li>
+          <li><a href="contact.html" class="u-link py-2 transition hover:text-ink-soft">Contact</a></li>
+          <li><a href="network.html" class="u-link py-2 transition hover:text-ink-soft">Network</a></li>
+          <li><a href="about.html"      class="u-link py-2 transition hover:text-ink-soft">About</a></li>
+        </ul>
+
+        <!-- Call (mobile only, sits right) -->
+        <a href="tel:+447587543669" aria-label="Call JK Smart Logistics"
+           class="ml-auto grid h-11 w-11 shrink-0 place-items-center rounded-xl text-ink transition hover:bg-mist lg:hidden">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3h3l1.5 4-2 1.4a12.5 12.5 0 0 0 5.5 5.5l1.4-2 4 1.5v3a2 2 0 0 1-2.2 2A16.8 16.8 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/></svg>
+        </a>
+
+        <!-- Desktop CTA -->
+        <a href="contact.html"
+           class="group ml-auto hidden h-12 items-center gap-2.5 rounded-full bg-ink pl-6 pr-2 text-[15px] font-semibold text-white transition hover:bg-ink-soft lg:inline-flex">
+          Contact JK
+          <span class="grid h-8 w-8 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+          </span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden border-t border-line bg-white lg:hidden">
+      <div class="space-y-1 px-4 py-4 sm:px-6">
+        <a href="#services"   class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">Services</a>
+        <a href="contact.html" class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">Contact</a>
+        <a href="network.html" class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">Network</a>
+        <a href="about.html"      class="block rounded-xl px-3 py-3 text-base font-medium transition hover:bg-mist">About</a>
+        <div class="flex gap-3 pt-3">
+          <a href="contact.html" class="flex flex-1 items-center justify-center rounded-full bg-ink px-5 py-3.5 text-sm font-semibold text-white">Contact JK</a>
+        </div>
+        <a href="tel:+447587543669" class="block px-3 pt-3 text-sm font-semibold text-ink-mute">+44 7587 543669</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ BREADCRUMB ════════════════════════════════════════════════════ -->
+  <nav aria-label="Breadcrumb" class="border-b border-line bg-white">
+    <ol class="mx-auto flex max-w-shell items-center gap-2 px-4 py-3.5 text-[12px] font-semibold uppercase tracking-[.12em] sm:px-6 lg:px-10">
+      <li><a href="#" class="text-lime-deep transition hover:text-ink">By Industry</a></li>
+      <li aria-hidden="true" class="text-ink-mute">
+        <svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 6 6 6-6 6"/></svg>
+      </li>
+      <li class="truncate text-ink-mute" aria-current="page">Transport and Logistics</li>
+    </ol>
+  </nav>
+
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <section class="relative isolate overflow-hidden bg-ink">
+
+    <!-- The scene. Held dark down the left so the copy reads, left clear on the
+         right so the livery stays legible. -->
+    <img src="images/web/hero-artic.jpg" alt="JK Smart Logistic Ltd articulated lorry on the motorway"
+         class="absolute inset-0 -z-10 hidden h-full w-full object-cover object-[64%_center] brightness-[.62] saturate-[.85] lg:block"
+         width="2172" height="724" loading="eager" fetchpriority="high" decoding="async" />
+    <div aria-hidden="true" class="absolute inset-0 -z-10 hidden lg:block"
+         style="background:linear-gradient(90deg,#05070a 0%,rgba(5,7,10,.94) 26%,rgba(5,7,10,.6) 46%,rgba(5,7,10,.1) 68%,rgba(5,7,10,.3) 100%)"></div>
+    <div aria-hidden="true" class="absolute inset-0 -z-10 hidden bg-gradient-to-t from-ink via-transparent to-ink/55 lg:block"></div>
+
+    <!-- Phones: the lorry sits above the copy instead of behind it -->
+    <div class="relative aspect-[12/5] w-full overflow-hidden sm:aspect-[3/1] lg:hidden">
+      <img src="images/web/hero-artic.jpg" alt="JK Smart Logistic Ltd articulated lorry on the motorway"
+           class="h-full w-full object-cover object-center"
+           width="2172" height="724" loading="eager" fetchpriority="high" decoding="async" />
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent"></div>
+    </div>
+
+    <div class="mx-auto max-w-shell px-4 sm:px-6 lg:px-10">
+      <div class="animate-fadeUp pb-14 pt-10 lg:min-h-[600px] lg:pb-32 lg:pt-20">
+
+        <div class="max-w-[600px]">
+          <p class="text-[12px] font-bold uppercase tracking-[.28em] text-lime">JK Smart Logistic Ltd</p>
+
+          <h1 class="mt-4 font-display text-[40px] font-extrabold leading-[0.98] tracking-tight text-white sm:text-[56px] lg:text-[68px]">
+            Transport and<br class="hidden sm:block" /> Logistics
+          </h1>
+
+          <span aria-hidden="true" class="mt-6 block h-[3px] w-14 rounded-full bg-lime"></span>
+
+          <p class="mt-6 text-lg font-bold leading-snug text-white sm:text-[22px]">
+            You set the destination. We create the path.
+          </p>
+          <p class="mt-3 max-w-[46ch] text-[15px] leading-relaxed text-white/70">
+            From our Luton hub, JK Smart Logistic Ltd moves freight to every UK postcode — with live
+            tracking, proof of delivery in seconds, and a fleet built for the miles that matter.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="contact.html"
+               class="group inline-flex h-[52px] items-center justify-center gap-3 rounded-full bg-lime px-7 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+              Get a Quote
+              <svg class="h-4 w-4 transition-transform group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a href="#services"
+               class="inline-flex h-[52px] items-center justify-center rounded-full border border-white/30 bg-ink/40 px-7 text-[15px] font-semibold text-white backdrop-blur-sm transition hover:border-white/70 hover:bg-ink/70">
+              Our Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats, sat along the bottom of the scene -->
+        <dl class="mt-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-0 lg:mt-16">
+          <div class="flex items-center gap-3.5 sm:pr-8 lg:pr-12">
+            <svg class="h-6 w-6 shrink-0 text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7.5h11v9H2z"/><path d="M13 10.5h4.5L21 14v2.5h-8z"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+            <div>
+              <dt class="sr-only">Vehicle types in our fleet</dt>
+              <dd class="font-display text-[26px] font-extrabold leading-none text-white" data-count="9" data-decimals="0" data-suffix="">0</dd>
+              <p class="mt-1.5 text-[11px] font-semibold uppercase tracking-[.14em] text-white/55">Vehicle types</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3.5 sm:border-l sm:border-white/15 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12">
+            <svg class="h-6 w-6 shrink-0 text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <div>
+              <dt class="sr-only">Maximum payload on a single vehicle</dt>
+              <dd class="font-display text-[26px] font-extrabold leading-none text-white" data-count="26" data-decimals="0" data-suffix="t">0t</dd>
+              <p class="mt-1.5 text-[11px] font-semibold uppercase tracking-[.14em] text-white/55">Max payload, one load</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3.5 sm:border-l sm:border-white/15 sm:pl-8 lg:pl-12">
+            <svg class="h-6 w-6 shrink-0 text-lime" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div>
+              <dt class="sr-only">Where we are based</dt>
+              <dd class="font-display text-[26px] font-extrabold leading-none text-white">M1 J10</dd>
+              <p class="mt-1.5 text-[11px] font-semibold uppercase tracking-[.14em] text-white/55">Luton hub, on the motorway</p>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ CONTACT STRIP (overlaps the hero) ═════════════════════════════ -->
+  <section id="contact-strip" class="relative z-20 scroll-mt-28 lg:-mt-24">
+    <div class="mx-auto max-w-shell px-4 sm:px-6 lg:px-10">
+
+      <div class="overflow-hidden rounded-[24px] bg-white shadow-card">
+        <div class="grid grid-cols-1 divide-line sm:grid-cols-2 lg:grid-cols-4 lg:divide-x">
+          <a class="group flex items-start gap-3.5 px-5 py-6 border-b border-r border-line lg:border-b-0 lg:border-r-0 lg:px-6 lg:py-8" href="tel:+447587543669">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-mist text-ink transition group-hover:bg-lime">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z"/></svg>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[11px] font-bold uppercase tracking-[.16em] text-ink-mute">Call the team</span>
+              <span class="mt-1 block font-display text-[16px] font-extrabold leading-snug tracking-tight transition group-hover:text-lime-deep">+44 7587 543669</span>
+              <span class="mt-0.5 block text-[13px] leading-snug text-ink-mute">Mon&ndash;Fri 07:00&ndash;19:00</span>
+            </span>
+          </a>
+          <a class="group flex items-start gap-3.5 px-5 py-6 border-b border-line lg:border-b-0 lg:px-6 lg:py-8" href="mailto:r.singh@jksmartlogistics.co.uk">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-mist text-ink transition group-hover:bg-lime">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m3.6 6.8 8.4 6 8.4-6"/></svg>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[11px] font-bold uppercase tracking-[.16em] text-ink-mute">Email us</span>
+              <span class="mt-1 block font-display text-[16px] font-extrabold leading-snug tracking-tight break-all transition group-hover:text-lime-deep">r.singh@jksmartlogistics.co.uk</span>
+              <span class="mt-0.5 block text-[13px] leading-snug text-ink-mute">Quotes answered same working day</span>
+            </span>
+          </a>
+          <a class="group flex items-start gap-3.5 px-5 py-6 border-r border-line lg:border-r-0 lg:px-6 lg:py-8" href="network.html">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-mist text-ink transition group-hover:bg-lime">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[11px] font-bold uppercase tracking-[.16em] text-ink-mute">Our yard</span>
+              <span class="mt-1 block font-display text-[16px] font-extrabold leading-snug tracking-tight transition group-hover:text-lime-deep">33 Grasmere Road, Luton</span>
+              <span class="mt-0.5 block text-[13px] leading-snug text-ink-mute">LU3 2DT &middot; M1 junctions 10 &amp; 11</span>
+            </span>
+          </a>
+          <div class="group flex items-start gap-3.5 px-5 py-6 lg:px-6 lg:py-8">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-mist text-ink transition">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 2"/></svg>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[11px] font-bold uppercase tracking-[.16em] text-ink-mute">Opening hours</span>
+              <span class="mt-1 block font-display text-[16px] font-extrabold leading-snug tracking-tight ">Mon&ndash;Fri 07:00&ndash;19:00</span>
+              <span class="mt-0.5 block text-[13px] leading-snug text-ink-mute">Sat 08:00&ndash;13:00 &middot; Sun closed</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ VALUE INTRO ═══════════════════════════════════════════════════ -->
+  <section id="about" class="scroll-mt-28 bg-mist">
+    <div class="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:py-20">
+      <h2 class="font-display text-[30px] font-extrabold leading-[1.12] tracking-tight sm:text-[38px] lg:text-[44px]">
+        Keep Britain&rsquo;s Goods Moving with JK Logistics
+      </h2>
+      <p class="mx-auto mt-6 max-w-3xl text-[16px] leading-relaxed text-ink-mute sm:text-[17px]">
+        Live visibility and smart routing turn every mile into something you can act on. Our planners, drivers and
+        technology work off the same picture of your freight &mdash; so loads leave on schedule, arrive where they
+        should, and tell you exactly where they are in between. No chasing. No guesswork. Just goods that land on time.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ HOW WE WORK ════════════════════════════════════════ -->
+  <section class="bg-ink text-white">
+    <div class="mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
+      <div class="grid gap-12 md:grid-cols-3 md:gap-10 lg:gap-14">
+        <div>
+          <span aria-hidden="true" class="block h-1 w-12 rounded-full bg-lime"></span>
+          <h3 class="mt-7 font-display text-[26px] font-extrabold leading-[1.14] tracking-tight sm:text-[30px]">Our own fleet</h3>
+          <p class="mt-4 text-[16px] leading-relaxed text-white/70 sm:text-[17px]">Nine vehicle types, from a small van carrying one pallet to a 44-tonne artic carrying twenty-six. We quote for the vehicle the job actually needs, so you are not paying to move fresh air.</p>
+        </div>
+
+        <div>
+          <span aria-hidden="true" class="block h-1 w-12 rounded-full bg-lime"></span>
+          <h3 class="mt-7 font-display text-[26px] font-extrabold leading-[1.14] tracking-tight sm:text-[30px]">Tail lift as standard</h3>
+          <p class="mt-4 text-[16px] leading-relaxed text-white/70 sm:text-[17px]">Every vehicle from 7.5 tonnes upward carries one. That means we can deliver where there is no loading dock and no forklift &mdash; building sites, small units, shops on a high street.</p>
+        </div>
+
+        <div>
+          <span aria-hidden="true" class="block h-1 w-12 rounded-full bg-lime"></span>
+          <h3 class="mt-7 font-display text-[26px] font-extrabold leading-[1.14] tracking-tight sm:text-[30px]">Minutes from the M1</h3>
+          <p class="mt-4 text-[16px] leading-relaxed text-white/70 sm:text-[17px]">Our yard sits by junctions 10 and 11 at Luton, a short run to the A1(M) and on the edge of London rather than inside it. Earlier collections, later cut-offs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FLEET CAROUSEL ════════════════════════════════════════════════ -->
+  <section id="fleet" class="scroll-mt-28 bg-mist">
+    <div class="mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-[30px] font-extrabold leading-[1.12] tracking-tight sm:text-[38px] lg:text-[42px]">
+          The Right Vehicle for the Job
+        </h2>
+        <p class="mt-5 text-[16px] leading-relaxed text-ink-mute sm:text-[17px]">
+          Nine vehicle types, from a small van that will take a single pallet to a 44-tonne artic
+          carrying twenty-six. Tell us the weight, the dimensions and where it is going, and we will
+          tell you which one you need &mdash; including when a smaller one will do and cost you less.
+        </p>
+      </div>
+
+      <!-- Carousel: a rail of cards, so neighbouring vehicles stay in view -->
+      <div class="relative mt-12" role="region" aria-roledescription="carousel" aria-label="JK Smart Logistics fleet">
+
+        <button type="button" data-slide="prev" aria-label="Previous vehicle"
+                class="absolute -left-4 top-[130px] z-10 hidden h-12 w-12 place-items-center rounded-full border border-line bg-white text-ink shadow-sm transition hover:border-ink/30 hover:text-lime-deep disabled:pointer-events-none disabled:opacity-30 xl:grid"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+        <button type="button" data-slide="next" aria-label="Next vehicle"
+                class="absolute -right-4 top-[130px] z-10 hidden h-12 w-12 place-items-center rounded-full border border-line bg-white text-ink shadow-sm transition hover:border-ink/30 hover:text-lime-deep disabled:pointer-events-none disabled:opacity-30 xl:grid"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+
+        <div id="fleet-track" tabindex="0"
+             class="flex snap-x snap-mandatory items-stretch gap-5 overflow-x-auto scroll-smooth pb-2">
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="0" role="group" aria-roledescription="slide" aria-label="1 of 9: Small Van">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/small%20van.png" alt="JK Smart Logistics small van"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Same-day city runs</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Small Van</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Our nimblest option for documents, spares and small parcels. Parks where a big van can't, so it's first choice for tight city centres and time-critical single drops.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">350 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">130 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">100 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">120 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1 pallet</dd>
+            </div>
+              </dl>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="1" role="group" aria-roledescription="slide" aria-label="2 of 9: Short Wheel Base">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/short%20wheel%20base.png" alt="JK Smart Logistics short wheel base"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Multi-drop courier work</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Short Wheel Base</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">The everyday workhorse of our multi-drop network. Handles a full round of retail and trade deliveries without sacrificing access to residential streets.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">800 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">220 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">130 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">130 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">2 pallets</dd>
+            </div>
+              </dl>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="2" role="group" aria-roledescription="slide" aria-label="3 of 9: Long Wheel Base">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/long%20wheel%20base.png" alt="JK Smart Logistics long wheel base"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Regional pallet moves</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Long Wheel Base</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Extra length for bulkier consignments and furniture, while staying inside standard van restrictions. Popular for regional trunking between our depots.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">330 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">175 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">130 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">3 pallets</dd>
+            </div>
+              </dl>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="3" role="group" aria-roledescription="slide" aria-label="4 of 9: XL Long Wheel Base">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/xl%20wheel%20long.png" alt="JK Smart Logistics xl long wheel base"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">High-volume, light loads</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">XL Long Wheel Base</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Maximum van capacity for light but bulky freight. Ideal when volume runs out long before weight does — packaging, retail displays and e-commerce stock.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">420 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">175 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">130 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">4 pallets</dd>
+            </div>
+              </dl>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="4" role="group" aria-roledescription="slide" aria-label="5 of 9: Luton Van">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/luton%20van.png" alt="JK Smart Logistics luton van"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Removals and bulky goods</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Luton Van</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Box body with a tail lift, so heavy items go on and off without a dock. The one we send for office moves, white goods and full-house removals.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">400 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">200 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">200 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">6 pallets</dd>
+            </div>
+              </dl>
+
+              <p class="mt-4 text-center text-[13px] text-ink-mute">Tail-lift weight capacity: <span class="font-display font-extrabold text-ink">500 kg</span></p>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="5" role="group" aria-roledescription="slide" aria-label="6 of 9: Curtain Side Van">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/curton%20side%20van.png" alt="JK Smart Logistics curtain side van"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Side-loading freight</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Curtain Side Van</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Curtains open the full length of the bed for forklift access from either side. Built for palletised goods that can't be loaded through rear doors.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">400 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">200 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">200 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">6 pallets</dd>
+            </div>
+              </dl>
+
+              <p class="mt-4 text-center text-[13px] text-ink-mute">Tail-lift weight capacity: <span class="font-display font-extrabold text-ink">500 kg</span></p>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="6" role="group" aria-roledescription="slide" aria-label="7 of 9: 7.5 Tonne Truck">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/7.5%20ton%20truck.png" alt="JK Smart Logistics 7.5 tonne truck"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Palletised distribution</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">7.5 Tonne Truck</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">The largest vehicle a standard car licence holder can drive, with a tail lift fitted as standard. Our backbone for palletised store deliveries.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">2,500 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">600 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">220 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">240 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">10 pallets</dd>
+            </div>
+              </dl>
+
+              <p class="mt-4 text-center text-[13px] text-ink-mute">Tail-lift weight capacity: <span class="font-display font-extrabold text-ink">700 kg</span></p>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="7" role="group" aria-roledescription="slide" aria-label="8 of 9: 18 Tonne Truck">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/18%20tonne.png" alt="JK Smart Logistics 18 tonne truck"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Full-load haulage</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">18 Tonne Truck</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Heavy haulage for full loads and depot-to-depot trunking. Runs overnight on our core routes so stock is on shelves before opening.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">9,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">730 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">240 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">240 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">14 pallets</dd>
+            </div>
+              </dl>
+
+              <p class="mt-4 text-center text-[13px] text-ink-mute">Tail-lift weight capacity: <span class="font-display font-extrabold text-ink">850 kg</span></p>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article class="fleet-card w-[86%] shrink-0 snap-start sm:w-[calc(50%-10px)]"
+                 data-index="8" role="group" aria-roledescription="slide" aria-label="9 of 9: Articulated Lorry">
+          <div class="flex h-full flex-col rounded-[24px] border border-line bg-white p-4 transition duration-300 hover:border-ink/15 hover:shadow-lg sm:p-6">
+
+            <div class="relative flex h-[132px] items-center justify-center overflow-hidden rounded-[18px] bg-gradient-to-br from-[#F8FAF7] via-[#F1F4EF] to-[#E6ECE3] px-3 sm:h-[168px] sm:px-4 lg:h-[196px]">
+              <span aria-hidden="true" class="absolute bottom-8 left-1/2 h-4 w-[66%] -translate-x-1/2 rounded-[50%] bg-ink/10 blur-lg"></span>
+              <img src="images/clean/artic.png" alt="JK Smart Logistics articulated lorry"
+                   class="relative max-h-[74%] w-auto max-w-full object-contain" loading="lazy" decoding="async" />
+              <span class="absolute left-4 top-4 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.12em] text-ink shadow-sm">Trunk runs</span>
+            </div>
+
+            <h3 class="mt-6 text-center font-display text-[24px] font-extrabold leading-tight tracking-tight">Articulated Lorry</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-center text-[14px] leading-relaxed text-ink-mute">Our largest unit, at 44 tonnes gross. A full 13.6 m trailer for bulk loads and the overnight trunk between our hub and the depot network.</p>
+
+            <div class="mt-auto">
+              <dl class="mt-6 flex flex-wrap justify-center gap-x-2 gap-y-5 border-t border-line pt-5 sm:gap-x-5">
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.6 8.2h8.8l2.1 10.2a1.5 1.5 0 0 1-1.5 1.8H7a1.5 1.5 0 0 1-1.5-1.8L7.6 8.2Z"/><circle cx="12" cy="5.6" r="2.2"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Payload</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">26,000 kg</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 4.5 4.5 19.5"/><path d="M19.5 10.5v-6h-6"/><path d="M4.5 13.5v6h6"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Length</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">1,360 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.5h14M5 20.5h14"/><path d="M12 6.8v10.4"/><path d="m9.6 9.2 2.4-2.4 2.4 2.4"/><path d="m9.6 14.8 2.4 2.4 2.4-2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Height</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">270 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5v14M20.5 5v14"/><path d="M6.8 12h10.4"/><path d="m9.2 9.6-2.4 2.4 2.4 2.4"/><path d="m14.8 9.6 2.4 2.4-2.4 2.4"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Width</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">240 cm</dd>
+            </div>
+            <div class="flex w-[30%] flex-col items-center text-center sm:w-[27%]">
+              <svg class="h-[22px] w-[22px] text-lime-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 15h17M3.5 19h17M7 15v4M12 15v4M17 15v4"/><path d="M6.5 5h11v7h-11z"/></svg>
+              <dt class="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[.05em] text-ink-mute sm:text-[10px] sm:tracking-[.1em]">Pallet cap</dt>
+              <dd class="mt-1 font-display text-[13px] font-extrabold leading-none sm:text-[15px]">26 pallets</dd>
+            </div>
+              </dl>
+
+              <a href="contact.html" class="group mt-5 flex h-[46px] items-center justify-center gap-2.5 rounded-full bg-ink text-[14px] font-semibold text-white transition hover:bg-ink-soft">
+                Get a quote
+                <span class="grid h-7 w-7 place-items-center rounded-full bg-lime text-ink transition group-hover:translate-x-0.5">
+                  <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+        </div>
+
+        <p class="mt-6 text-center text-[13px] leading-relaxed text-ink-mute">
+          Vehicle weights, dimensions and capacities are a guide only &mdash; please confirm them with your JK Smart adviser.
+        </p>
+
+        <div class="mt-6 flex items-center justify-between gap-4 xl:justify-center">
+          <button type="button" data-slide="prev" aria-label="Previous vehicle" class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-line bg-white text-ink shadow-sm transition hover:border-ink/30 hover:bg-mist disabled:opacity-30 xl:hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+
+          <div class="flex items-center justify-center gap-2.5" role="tablist" aria-label="Choose a vehicle">
+          <button type="button" data-dot="0" aria-label="Show Small Van"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="1" aria-label="Show Short Wheel Base"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="2" aria-label="Show Long Wheel Base"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="3" aria-label="Show XL Long Wheel Base"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="4" aria-label="Show Luton Van"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="5" aria-label="Show Curtain Side Van"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="6" aria-label="Show 7.5 Tonne Truck"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="7" aria-label="Show 18 Tonne Truck"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          <button type="button" data-dot="8" aria-label="Show Articulated Lorry"
+                  class="h-2.5 w-2.5 rounded-full bg-ink/20 transition hover:bg-ink/40"></button>
+          </div>
+
+          <button type="button" data-slide="next" aria-label="Next vehicle" class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-line bg-white text-ink shadow-sm transition hover:border-ink/30 hover:bg-mist disabled:opacity-30 xl:hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service photos: Unsplash (unsplash.com/photos/KSQgzzn3dW0, Jv1swO4FghI,
+       ZhNYKwjRMh4, and BHzqS50ESqI by Martin Galko) — free under the Unsplash licence. -->
+  <!-- ══ WHAT WE PROVIDE ═══════════════════════════════════ -->
+  <section id="services" class="scroll-mt-28 bg-white">
+    <div class="mx-auto max-w-shell px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
+
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="font-display text-[30px] font-extrabold leading-[1.12] tracking-tight sm:text-[38px] lg:text-[42px]">
+          What We Provide
+        </h2>
+        <p class="mt-5 text-[16px] leading-relaxed text-ink-mute sm:text-[17px]">
+          Ten services across courier, freight and specialist work &mdash; all of it on our own
+          vehicles, out of one yard in Luton. Hover any card to see what that service covers.
+        </p>
+      </div>
+
+      <div id="courier" class="mt-14 scroll-mt-28 lg:mt-16">
+        <div class="flex flex-col gap-1 border-b border-line pb-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+          <h3 class="font-display text-[22px] font-extrabold leading-tight tracking-tight sm:text-[26px]">Urgent and scheduled deliveries</h3>
+          <p class="text-[12px] font-bold uppercase tracking-[.2em] text-lime-deep">01 / Courier</p>
+        </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-6">
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/same-day-courier.jpg" alt="JK Smart courier carrying parcels along a city street"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Dedicated</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">A vehicle assigned to your job and nothing else. It collects, it drives, it delivers &mdash; no sorting hub, no overnight trailer, no second driver halfway.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Book a same-day run
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Same-Day Courier</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/overnight-trunk.jpg" alt="Lorry running an overnight trunk route on the motorway at dusk"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Scheduled</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Book during the day, we collect the same afternoon and deliver the following morning. Stock on the shelf before you open, without paying same-day rates for it.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Check tomorrow&rsquo;s cut-off
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Next Day &amp; Overnight</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/parcels-documents.jpg" alt="A single parcel handed over at the door"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Direct</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">A single box or an envelope that has to arrive today and cannot risk a parcel network. One van, one driver, collection straight through to the door.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Send one item
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Parcels &amp; Documents</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/multi-drop.jpg" alt="Delivery van working a round on a city street"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Routed</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Planned rounds sequenced before the driver starts, so the route runs in a line rather than criss-crossing the county. One collection, one invoice, one person to ring.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Plan a round
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Multi-Drop Distribution</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/planned.jpg" alt="Fleet of lorries lined up in a depot yard"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Contracted</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">The same run on the same days at an agreed rate, with a driver who learns your customers, their gate codes and where the loading bay actually is.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Set up a route
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Planned Routes</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        </div>
+      </div>
+
+      <div id="freight" class="mt-14 scroll-mt-28 lg:mt-16">
+        <div class="flex flex-col gap-1 border-b border-line pb-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+          <h3 class="font-display text-[22px] font-extrabold leading-tight tracking-tight sm:text-[26px]">Pallets, full loads and awkward shapes</h3>
+          <p class="text-[12px] font-bold uppercase tracking-[.2em] text-lime-deep">02 / Freight</p>
+        </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-6">
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/pallet-freight.jpg" alt="Stacked wooden pallets in a freight warehouse"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Networked</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Full loads and part loads, one pallet through to twenty-six. Tail lift fitted from 7.5 tonnes upward, so we can deliver where there is no dock and no forklift.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Price a pallet
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Pallet Freight</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/european-freight.jpg" alt="Articulated lorry running a full load on the open road"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Exclusive</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Enough to fill a lorry? Take the whole vehicle. It runs from your loading bay to the delivery address without being broken down and rebuilt at a depot on the way.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Price a full load
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Full Truck Load</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/oversized-loads.jpg" alt="Forklift side-loading palletised goods onto a flatbed lorry"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Side-loaded</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Our curtain-sided vehicle opens along its whole length, so a forklift can load from either side. The answer for long steel, machinery, glass, timber and packaged units.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Send us dimensions
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Oversized &amp; Awkward Loads</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        </div>
+      </div>
+
+      <div id="specialist" class="mt-14 scroll-mt-28 lg:mt-16">
+        <div class="flex flex-col gap-1 border-b border-line pb-5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+          <h3 class="font-display text-[22px] font-extrabold leading-tight tracking-tight sm:text-[26px]">Handled, stored and put back together</h3>
+          <p class="text-[12px] font-bold uppercase tracking-[.2em] text-lime-deep">03 / Specialist</p>
+        </div>
+        <div class="mt-8 flex flex-wrap justify-center gap-6">
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/removals.jpg" alt="Removal van loaded with wrapped furniture and boxes"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Handled</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Office moves, machinery, white goods and furniture &mdash; the things too big or too valuable for a parcel network. Box body, tail lift, and a crew who wrap and load.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Plan a move
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Removals &amp; Bulky Goods</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        <article class="group relative overflow-hidden rounded-[24px] bg-white shadow-sm ring-1 ring-line transition duration-300 hover:shadow-lg w-full shrink-0 sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+
+          <div class="relative aspect-[4/3] overflow-hidden bg-mist">
+            <img src="images/web/contact-header.jpg" alt="JK Smart team picking stock in the warehouse aisles"
+                 class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                 loading="lazy" decoding="async" />
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.14em] text-ink shadow-sm">Stored</span>
+
+            <!-- Slides up on hover, keyboard focus, or tap -->
+            <div class="reveal absolute inset-x-0 bottom-0 bg-ink/95 p-6 text-white backdrop-blur-sm">
+              <p class="text-[14px] leading-relaxed text-white/85">Pallet and shelf storage at our Luton site, with our team picking, packing and despatching. The same company stores it and moves it, so there is one set of paperwork.</p>
+              <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-[14px] font-bold text-lime underline-offset-4 hover:underline">
+                Tour the warehouse
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <button type="button" data-reveal aria-expanded="false"
+                  class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition hover:bg-mist">
+            <h3 class="font-display text-[19px] font-extrabold leading-tight tracking-tight">Warehousing &amp; 3PL</h3>
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-ink"><svg class="h-5 w-5 transition-transform duration-500 group-hover:rotate-180 group-focus-within:rotate-180 [.is-open_&]:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></span>
+          </button>
+        </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CLOSING CTA ═══════════════════════════════════════════════════ -->
+  <section id="quote" class="scroll-mt-28 bg-ink">
+    <div class="mx-auto max-w-shell px-4 py-16 text-center sm:px-6 lg:px-10 lg:py-20">
+      <h2 class="mx-auto max-w-3xl font-display text-[28px] font-extrabold leading-[1.14] tracking-tight text-white sm:text-[36px] lg:text-[42px]">
+        Ready to Move Your Freight Without the Guesswork?
+      </h2>
+      <a href="tel:+447587543669"
+         class="group mt-9 inline-flex h-[58px] items-center gap-4 rounded-full bg-lime pl-7 pr-2.5 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+        Take the next step with us today
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-ink text-lime transition group-hover:translate-x-0.5">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
+  <footer class="border-t border-white/10 bg-ink text-white">
+    <div class="mx-auto max-w-shell px-4 py-14 sm:px-6 lg:px-10 lg:py-16">
+
+      <!-- Logo + contact actions -->
+      <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+        <a href="#" aria-label="JK Smart Logistics home" class="w-fit">
+          <img src="images/clean/logo.png" alt="JK Smart Logistics Ltd" class="h-16 w-auto sm:h-20 brightness-200" width="640" height="321" />
+        </a>
+
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <p class="font-display text-[19px] font-extrabold tracking-tight">Connect with Our Team</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="contact.html" class="inline-flex h-12 items-center gap-2.5 rounded-full bg-lime px-6 text-[15px] font-bold text-ink transition hover:bg-lime-dark">
+              Contact JK
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Company</h3>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="about.html" class="text-[15px] text-white/65 transition hover:text-lime">About Us</a></li>
+            <li><a href="#fleet" class="text-[15px] text-white/65 transition hover:text-lime">Our Fleet</a></li>
+            <li><a href="network.html" class="text-[15px] text-white/65 transition hover:text-lime">Depot Network</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Sustainability</a></li>
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Services</h3>
+          <ul class="mt-5 grid grid-cols-2 gap-x-5 gap-y-3.5">
+            <li><a href="#courier" class="text-[15px] text-white/65 transition hover:text-lime">Same-Day Courier</a></li>
+            <li><a href="#courier" class="text-[15px] text-white/65 transition hover:text-lime">Next Day &amp; Overnight</a></li>
+            <li><a href="#courier" class="text-[15px] text-white/65 transition hover:text-lime">Parcels &amp; Documents</a></li>
+            <li><a href="#courier" class="text-[15px] text-white/65 transition hover:text-lime">Multi-Drop Distribution</a></li>
+            <li><a href="#courier" class="text-[15px] text-white/65 transition hover:text-lime">Planned Routes</a></li>
+            <li><a href="#freight" class="text-[15px] text-white/65 transition hover:text-lime">Pallet Freight</a></li>
+            <li><a href="#freight" class="text-[15px] text-white/65 transition hover:text-lime">Full Truck Load</a></li>
+            <li><a href="#freight" class="text-[15px] text-white/65 transition hover:text-lime">Oversized &amp; Awkward Loads</a></li>
+            <li><a href="#specialist" class="text-[15px] text-white/65 transition hover:text-lime">Removals &amp; Bulky Goods</a></li>
+            <li><a href="#specialist" class="text-[15px] text-white/65 transition hover:text-lime">Warehousing &amp; 3PL</a></li>
+          </ul>
+        </div>
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Support</h3>
+          <ul class="mt-5 space-y-3.5">
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Request a Quote</a></li>
+            <li><a href="contact.html" class="text-[15px] text-white/65 transition hover:text-lime">Book a Collection</a></li>
+            <li><a href="network.html" class="text-[15px] text-white/65 transition hover:text-lime">Coverage &amp; Cut-offs</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Delivery FAQs</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Make a Claim</a></li>
+            <li><a href="#" class="text-[15px] text-white/65 transition hover:text-lime">Report an Issue</a></li>
+          </ul>
+        </div>
+
+        <div class="border-t border-white/20 pt-6">
+          <h3 class="font-display text-[15px] font-extrabold tracking-tight text-white">Stay up to date with JK Smart</h3>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/65">
+            Service updates, depot news and seasonal cut-off dates. One email a month, no more.
+          </p>
+          <form id="newsletter" class="mt-5 flex flex-col gap-3" novalidate>
+            <label class="sr-only" for="news-email">Email address</label>
+            <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@company.co.uk"
+                   class="h-12 w-full rounded-full border border-white/25 bg-white/10 px-5 text-[15px] text-white outline-none transition placeholder:text-white/45 focus:border-lime focus:bg-white/15" />
+            <button type="submit"
+                    class="group inline-flex h-12 w-fit items-center gap-3 rounded-full bg-white pl-6 pr-2 text-[15px] font-bold text-ink transition hover:bg-white/90">
+              Register Now
+              <span class="grid h-8 w-8 place-items-center rounded-full bg-ink text-lime transition group-hover:translate-x-0.5">
+                <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+              </span>
+            </button>
+          </form>
+          <p id="news-msg" class="mt-3 hidden text-[14px] font-medium"></p>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="mt-14 flex flex-col gap-5 border-t border-white/15 pt-8 lg:flex-row lg:items-center lg:justify-between">
+        <p class="text-[13px] text-white/50">
+          &copy; 2026 JK Smart Logistics Ltd. Registered in England &amp; Wales. All rights reserved.
+        </p>
+        <ul class="flex flex-wrap gap-x-7 gap-y-2 text-[13px]">
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Privacy Policy</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Cookie Policy</a></li>
+          <li><a href="#" class="text-white/50 transition hover:text-lime">Modern Slavery Statement</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ SIDE TAB ══════════════════════════════════════════════════════ -->
+  <a href="contact.html"
+     class="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 rounded-l-xl bg-lime px-3 py-5 text-[13px] font-bold uppercase tracking-[.14em] text-ink shadow-lift transition hover:bg-lime-dark lg:block"
+     style="writing-mode: vertical-rl;">
+    Enquire Now
+  </a>
+
+  
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
